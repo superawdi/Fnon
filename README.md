@@ -4,7 +4,15 @@ Fnon is the name of my late mother, It's an Arabic name which means Art, I creat
 
 Fnon is a client-side JavaScript library for models, loading indicators, notifications, and alerts which makes your web projects much better.
 
-Colors are based on Bootstrap main categories: Light, Primary, Info, Warning, Danger and Dark.
+Colors are based on Bootstrap main categories:
+
+![](https://via.placeholder.com/15/ffffff/000000?text=+) `Light`
+![](https://via.placeholder.com/15/029eff/000000?text=+) `Primary`
+![](https://via.placeholder.com/15/39DA8A/000000?text=+) `Success`
+![](https://via.placeholder.com/15/f55260/000000?text=+) `Danger`
+![](https://via.placeholder.com/15/fdd347/000000?text=+) `Warning`
+![](https://via.placeholder.com/15/56b6f7/000000?text=+) `Info`
+![](https://via.placeholder.com/15/222f3e/000000?text=+) `Dark`
 
 
 ##### Current Version : [1.0.0](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
@@ -55,6 +63,13 @@ Add to HTML (css and js)
 
 ## Usage
 #### 1- Hint
+Hint has 7 themed functions based on bootstrap colors![](https://via.placeholder.com/15/ffffff/000000?text=+) `Light`
+![](https://via.placeholder.com/15/029eff/000000?text=+) `Primary`
+![](https://via.placeholder.com/15/39DA8A/000000?text=+) `Success`
+![](https://via.placeholder.com/15/f55260/000000?text=+) `Danger`
+![](https://via.placeholder.com/15/fdd347/000000?text=+) `Warning`
+![](https://via.placeholder.com/15/56b6f7/000000?text=+) `Info`
+![](https://via.placeholder.com/15/222f3e/000000?text=+) `Dark`
 
 ```js
 
