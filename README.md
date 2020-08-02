@@ -370,7 +370,6 @@ Fnon.Dialogue.Danger({
        // if you return false that would forbid the model from closing itself
      }
 });
-
 // remaining functions are:
 // Fnon.Dialogue.Primary(.....);
 // Fnon.Dialogue.Warning(.....);
@@ -378,6 +377,15 @@ Fnon.Dialogue.Danger({
 // Fnon.Dialogue.Light(.....);
 // Fnon.Dialogue.Info(.....);
 ```
+> **callback** of Ok button returns two params ( **closer** function and **html of dialogue** body). If you decid to return `false` to avoid closing the model, you can simply call the **closer** fuciton.
+```js
+Fnon.Dialogue.Success('Message','Title','Sure','Naah',(closer,html)=>{
+   return false; // this will avoid closing the model.
+   closer();// will force the closing.
+   // html is simply the body container where you can use it to do some validation, querying,...etc.
+});
+```
+
 > **Width** and **Animation Effects** are similar to **Alert**.
 
 >**Init** function also here works the same as **Alert** and **Ask**.
