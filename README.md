@@ -372,11 +372,11 @@ Fnon.Dialogue.Danger({
 });
 
 // remaining functions are:
-// Fnon.Ask.Primary(.....);
-// Fnon.Ask.Warning(.....);
-// Fnon.Ask.Dark(.....);
-// Fnon.Ask.Light(.....);
-// Fnon.Ask.Info(.....);
+// Fnon.Dialogue.Primary(.....);
+// Fnon.Dialogue.Warning(.....);
+// Fnon.Dialogue.Dark(.....);
+// Fnon.Dialogue.Light(.....);
+// Fnon.Dialogue.Info(.....);
 ```
 > **Width** and **Animation Effects** are similar to **Alert**.
 
