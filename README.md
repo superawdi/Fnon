@@ -27,6 +27,7 @@ Colors are based on Bootstrap main categories:
 npm i fnon
 ```
 
+
 >Add direct to HTML (css and js)
 ```html
 <link rel="stylesheet" href="dist/fnon.min.css" />
@@ -261,6 +262,10 @@ Fnon.Alert.Init({
     btnOkBackground: '#d4d4d4',
     btnOkShadow: 'rgba(0, 0, 0, 0.2)',
     btnOkBorderColor: '#d4d4d4',
+
+    // Functions
+    beforeShow: undefined,
+    afterShow: undefined,
 });
 ```
 > **Width**: Normarl 'nl', Small 'sm', Large 'lg', X-Large 'xl'.
@@ -328,6 +333,11 @@ Fnon.Ask.Init({
 
     color: '#2b2b2b',
     background: 'rgba(0, 0, 0, 0.1)',
+
+    // Functions
+    beforeShow: undefined,
+    afterShow: undefined,
+
 });
 ```
 > **Width** and **Animation Effects** are similar to **Alert**.
@@ -377,7 +387,7 @@ Fnon.Dialogue.Success('Message','Title','Sure','Naah',(closer,html)=>{
 
 >**Init** function also here works the same as **Alert** and **Ask**.
 ```js
-Fnon.Ask.Init({
+Fnon.Dialogue.Init({
     fontFamily: defaultFont,
     width: 'nl', // sm//lg//nl//xl
     closeButton: true,
@@ -401,6 +411,33 @@ Fnon.Ask.Init({
     btnCancelBorderColor: '#d4d4d4',
     color: '#2b2b2b',
     background: 'rgba(0, 0, 0, 0.1)',
+
+    // Functions
+    beforeShow: undefined,
+    afterShow: undefined,
+});
+
+```
+---
+> **Functions** : Alert,Ask and Dialogue have two simple functions.
+
+`beforeShow` function : after html is rendered but not appened to body.
+`afterShow` function : after html appened to body.
+Both functions pass the HTML content in param.
+
+```
+Fnon.Dialogue.Primary({
+  title:'title',
+  message:'content',
+  callback:(closer, html)=>{
+
+  },
+  beforeShow:(html)=>{
+
+  },
+  afterShow:(html)=>{
+
+  }
 });
 
 ```
