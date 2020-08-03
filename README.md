@@ -27,19 +27,6 @@ Colors are based on Bootstrap main categories:
 npm i fnon
 ```
 
-
-Import
-
-```jsx
-// all modules
-import Fnon from "fnon";
-
-// one by one
-import { Hint, Wait, Box, Dialogue, Alert, Ask} from "fnon";
-```
-
-
-
 >Add direct to HTML (css and js)
 ```html
 <link rel="stylesheet" href="dist/fnon.min.css" />
