@@ -21,7 +21,7 @@ Colors are based on Bootstrap main categories:
 
 ## Installation  : 
 
->[Use node package manager](https://pip.pypa.io/en/stable/) :
+>[Use node package manager](https://www.npmjs.com/package/fnon) :
 
 ```bash
 npm i fnon
