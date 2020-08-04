@@ -262,6 +262,8 @@ Fnon.Alert.Init({
     btnOkBackground: '#d4d4d4',
     btnOkShadow: 'rgba(0, 0, 0, 0.2)',
     btnOkBorderColor: '#d4d4d4',
+    
+    zIndex:4000,
 
     // Functions
     beforeShow: undefined,
@@ -333,6 +335,8 @@ Fnon.Ask.Init({
 
     color: '#2b2b2b',
     background: 'rgba(0, 0, 0, 0.1)',
+    
+    zIndex:4000,
 
     // Functions
     beforeShow: undefined,
@@ -411,6 +415,8 @@ Fnon.Dialogue.Init({
     btnCancelBorderColor: '#d4d4d4',
     color: '#2b2b2b',
     background: 'rgba(0, 0, 0, 0.1)',
+    
+    zIndex:4000,
 
     // Functions
     beforeShow: undefined,
