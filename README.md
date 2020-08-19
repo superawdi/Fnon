@@ -64,7 +64,7 @@ Fnon.Hint.Dark('Rest in peace',{
 // Message with a callback
 Fnon.Hint.Info('God have mercy on you, my mother',{
     callback:function(){
-       console.log('Do not stop praying to your parents');
+       console.log('Do not stop praying for your parents');
     }
 });
 // rest of functions....
