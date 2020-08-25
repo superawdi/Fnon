@@ -15,7 +15,7 @@ Colors are based on Bootstrap main categories:
 ![](https://via.placeholder.com/15/222f3e/000000?text=+) `Dark`
 
 
-##### Current Version : [1.0.0](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
+##### Current Version : [1.0.7](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
 
 
 
@@ -50,27 +50,36 @@ Hint has 7 themed functions named as bootstrap's colors![](https://via.placehold
 ```js
 // @param1 {string}: Required, message text in String format[it's not a plane text, means you could add your own HTML syntax].
 // @param2 {Object}: Optional,update the initialize options with new options for current hint.
-
+ 
 // Just a message
 Fnon.Hint.Light("Your Message comes here");
-
+ 
+// Message with a title
+Fnon.Hint.Danger('You can not save record to database.','Connection Failure');
+ 
+// Message with a callback
+Fnon.Hint.Info('Your message',function(){
+  // callback function
+});
+// Message with a title
+Fnon.Hint.Success('Your message',{
+    callback:function(){
+       console.log('Do not stop praying for your parents');
+    },
+    title:'Title',
+});
 // Message with settings
 Fnon.Hint.Dark('Rest in peace',{
     position: 'right-top',
     fontSize: '14px',
-    width: '300px'
-});
-
-// Message with a callback
-Fnon.Hint.Info('God have mercy on you, my mother',{
+    width: '300px',
+    title:'Here comes the title',
     callback:function(){
-       console.log('Do not stop praying for your parents');
+      //do something
     }
 });
 // rest of functions....
-//Fnon.Hint.Success("Your Message comes here");
 //Fnon.Hint.Primary("Your Message comes here");
-//Fnon.Hint.Danger("Your Message comes here");
 //Fnon.Hint.Warning("Your Message comes here");
 ```
 >If you want to modify the **default Hint settings**, you can use the **Init** function. Below is the list of all available properties you could change.
@@ -91,6 +100,7 @@ Fnon.Hint.Init({
         displayDuration: 3000,
         progressColor: 'rgba(255,255,255,0.9)',
         callback:undefined,
+        title:undefined,
     });
 ```
 > Hint positioning can be set using the position property with any of the following options:
@@ -264,6 +274,7 @@ Fnon.Alert.Init({
     btnOkBorderColor: '#d4d4d4',
     
     zIndex:4000,
+    delButtons:false,
 
     // Functions
     beforeShow: undefined,
@@ -337,6 +348,7 @@ Fnon.Ask.Init({
     background: 'rgba(0, 0, 0, 0.1)',
     
     zIndex:4000,
+    delButtons:false,
 
     // Functions
     beforeShow: undefined,
@@ -417,6 +429,7 @@ Fnon.Dialogue.Init({
     background: 'rgba(0, 0, 0, 0.1)',
     
     zIndex:4000,
+    delButtons:false,
 
     // Functions
     beforeShow: undefined,
@@ -448,6 +461,20 @@ Fnon.Dialogue.Primary({
 
 ```
 ---
+> **deButtons** parameter.
+
+If you want to hide `Ok` and `Cancel` buttons, you simply set this parameter to `true`. By doing that you can receive a Close function when calling Alert, Ask, or Dialogue.
+```js
+// This would fire the Alert and return a close function.
+const closer= Fnon.Alert.Primary({
+  title:'Title',
+  message:'Message',
+  delButtons:true
+});
+ 
+// whenever you decide to close the Model just simply call the received closer
+closer();
+```
 
 
 ## Final Word
