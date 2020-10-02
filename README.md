@@ -393,8 +393,8 @@ Fnon.Dialogue.Danger({
 > **callback** of Ok and Cancel buttons returns two params ( **closer** function and **html of dialogue** body). If you decid to return `false` to avoid closing the model, you can simply call the **closer** fuciton.
 ```js
 Fnon.Dialogue.Success('Message','Title','Sure','Naah',(closer,html)=>{
+   // do something and call closer function to close the model
    return false; // this will avoid closing the model.
-   closer();// will force the closing.
    // html is simply the body container where you can use it to do some validation, querying,...etc.
 });
 ```
