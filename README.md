@@ -15,7 +15,7 @@ Colors are based on Bootstrap main categories:
 ![](https://via.placeholder.com/15/222f3e/000000?text=+) `Dark`
 
 
-##### Current Version : [1.0.0](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
+##### Current Version : [1.0.7](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
 
 
 
@@ -50,13 +50,13 @@ Hint has 7 themed functions named as bootstrap's colors![](https://via.placehold
 ```js
 // @param1 {string}: Required, message text in String format[it's not a plane text, means you could add your own HTML syntax].
 // @param2 {Object}: Optional,update the initialize options with new options for current hint.
-
+ 
 // Just a message
 Fnon.Hint.Light("Your Message comes here");
-
+ 
 // Message with a title
 Fnon.Hint.Danger('You can not save record to database.','Connection Failure');
-
+ 
 // Message with a callback
 Fnon.Hint.Info('Your message',function(){
   // callback function
@@ -186,9 +186,9 @@ well, it's basically similar to **Wait**, but it is used for blocking **specific
 // @param2 {string}: optional, message text in String format[it's not a plane text, means you could add your own HTML syntax].
 // @param3 {Object}: Optional,update the initialize options with new options for current wait block.
 // Simple call
-Fnon.Box.Infinity('div.className');
+Fnon.Wait.Infinity('div.className');
 // Call with a message
-Fnon.Box.Ripple('form.login','Loading'); 
+Fnon.Wait.Ripple('form.login','Loading'); 
 // call with html element, message and change some options
 const form= document.querySelector('form#login');
 Fnon.Wait.Liquid(form,'Please Wait',{
@@ -272,9 +272,9 @@ Fnon.Alert.Init({
     btnOkBackground: '#d4d4d4',
     btnOkShadow: 'rgba(0, 0, 0, 0.2)',
     btnOkBorderColor: '#d4d4d4',
-    delButtons:false,
-
+    
     zIndex:4000,
+    delButtons:false,
 
     // Functions
     beforeShow: undefined,
@@ -346,7 +346,7 @@ Fnon.Ask.Init({
 
     color: '#2b2b2b',
     background: 'rgba(0, 0, 0, 0.1)',
-
+    
     zIndex:4000,
     delButtons:false,
 
@@ -359,7 +359,7 @@ Fnon.Ask.Init({
 > **Width** and **Animation Effects** are similar to **Alert**.
 ---
 >### 6- Dialogue
-well, one last time :) it's similar to **Ask** and **alert** but in Dialogue there are no icons and it comes with two default buttons named `ok` and `cancel` with callbacks events if needed. You can **avoid closing** the model by simply returning `false` in callback function.
+well, one last time :) it's similar to **Ask** and **alert** but in Dialogue there are no icons and it comes with two callbacks if needed for `ok` and `cancel`. You can **avoid closing** the model by simply returning `false` in callback function.
 ```js
 // @param1 {string or object}: required, HTML element or respective selector.
 // @param2 {string}: optional, title || if not provided title section won't be displayed.
@@ -377,7 +377,7 @@ Fnon.Dialogue.Success('Message','Title','Sure','Naah',()=>{
 Fnon.Dialogue.Danger({
      title:'Login',
      message:'Login Form Html',
-     callback:(closer,html)=>{
+     callback:(result)=>{
        // do ....
        // ......
        // if you return false that would forbid the model from closing itself
@@ -390,60 +390,22 @@ Fnon.Dialogue.Danger({
 // Fnon.Dialogue.Light(.....);
 // Fnon.Dialogue.Info(.....);
 ```
-> **callback** of Ok and Cancel buttons returns two params ( **closer** function and **html of dialogue** body). If you decid to return `false` to avoid closing the model, you can simply call the **closer** fuciton.
+> **callback** of Ok button returns two params ( **closer** function and **html of dialogue** body). If you decid to return `false` to avoid closing the model, you can simply call the **closer** fuciton.
 ```js
-
 Fnon.Dialogue.Success('Message','Title','Sure','Naah',(closer,html)=>{
-  // you can pass the closer function to close the model
-  SomeWhereElse(closer);
    return false; // this will avoid closing the model.
+   closer();// will force the closing.
    // html is simply the body container where you can use it to do some validation, querying,...etc.
 });
-// p parameter suppose to be the closer function of the model
-function SomeWhereElse(p){
- p();
-}
-```
-> **Custom Buttons** : If you need to add more than two buttons you can simply provide a list of buttons through `buttons` parameter. Deafult style of the buttons will be `light` unless you specify the colors your self or just add a `style` property to the buttons objects as shown:
-
-```js
-Fnon.Dialogue.Danger({
-  title:'Title',
-  message:'message',
-  buttons:[
-    { text:'Hola', callback:(closer,html) => {
-      // ....
-    }},
-    { text:'Hi I am a style', style:'Danger'},
-    { 
-      text:'Here we specify everything', 
-      color:'#fff', background:'#123', 
-      shadow:'rgba(0,0,0,0.2)', 
-      borderColor:'#fgfg45', 
-      css:'SomeCssStyleAswell', 
-      //style:'Light',//'Danger','Primary','Dark',...etc [Bootstap main colors]
-      callback: (closer,html) => {
-      // do something
-      return false;// to avoid closing the model
-      }
-    }
-  ]
-
-});
-
 ```
 
-
-> **Animation Effects** are similar to **Alert**.
-
-> **Width** also is similar to **Alert** but in Dialogue I added a Full Width `fl` which will take 100% of the view height and width.
-
+> **Width** and **Animation Effects** are similar to **Alert**.
 
 >**Init** function also here works the same as **Alert** and **Ask**.
 ```js
 Fnon.Dialogue.Init({
     fontFamily: defaultFont,
-    width: 'nl', // sm//lg//nl//xl//fl
+    width: 'nl', // sm//lg//nl//xl
     closeButton: true,
     animation: 'slide-top',//'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
     closeButton: false,
@@ -465,15 +427,13 @@ Fnon.Dialogue.Init({
     btnCancelBorderColor: '#d4d4d4',
     color: '#2b2b2b',
     background: 'rgba(0, 0, 0, 0.1)',
-
+    
     zIndex:4000,
     delButtons:false,
 
     // Functions
     beforeShow: undefined,
     afterShow: undefined,
-    // custom buttons
-    buttons:undefined,
 });
 
 ```
@@ -500,10 +460,10 @@ Fnon.Dialogue.Primary({
 });
 
 ```
-> **delButtons** parameter.
+---
+> **deButtons** parameter.
 
-If you want to hide `Ok` and `Cancel` buttons, you simply set `delButtons` parameter to `true`. By doing that you can recive a closer function when calling Alert,Ask or Dialogue.
-
+If you want to hide `Ok` and `Cancel` buttons, you simply set this parameter to `true`. By doing that you can receive a Close function when calling Alert, Ask, or Dialogue.
 ```js
 // This would fire the Alert and return a close function.
 const closer= Fnon.Alert.Primary({
@@ -511,17 +471,14 @@ const closer= Fnon.Alert.Primary({
   message:'Message',
   delButtons:true
 });
-
+ 
 // whenever you decide to close the Model just simply call the received closer
 closer();
 ```
 
 
----
-
-
 ## Final Word
-Mother is an excellent example of love, affection, and sacrifice. So show the love to your mothers before it's too late, and `PLEASE PRAY FOR MY MOM.`
+Mother is an excellent example of love, affection, and sacrifice. So show the love to your mothers before it's too late.
 
 **I love you 𝔉𝔫𝔬𝔫**
 
