@@ -36,6 +36,9 @@ npm i fnon
 ```
 
 
+## Demo
+[Click for demo page](https://superawdi.github.io/Fnon/)
+
 
 ## Usage
 >### 1- Hint
