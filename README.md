@@ -17,6 +17,7 @@ Colors are based on Bootstrap main categories:
 
 ##### Current Version : [1.1.2](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
 
+##### [Live Demo](https://superawdi.github.io/Fnon/)
 
 
 ## Installation  : 
