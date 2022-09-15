@@ -15,7 +15,7 @@ Colors are based on Bootstrap main categories:
 ![](https://via.placeholder.com/15/222f3e/000000?text=+) `Dark`
 
 
-##### Current Version : [1.1.3](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
+##### Current Version : [1.1.4](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
 
 >### [Live Demo](https://superawdi.github.io/Fnon/)
 
@@ -225,7 +225,7 @@ Alert functions are based on bootstrap basic colors ![](https://via.placeholder.
 ![](https://via.placeholder.com/15/222f3e/000000?text=+) `Dark`
 
 ```js
-// @param1 {string or object}: required, message or an object will all settings.
+// @param1 {(string | HTMLElement) or json object}: required, message or an object with any settings you wish to modify.
 // @param2 {string}: optional, title || if not provided title section won't be displayed.
 // @param3 {string}: Optional, ok button text || default is Ok.
 // @param4 {function}: Optional, a callback function if needed.
@@ -253,7 +253,7 @@ Fnon.Alert.Danger({
 > Here also you can use the **Init** function to change the default settings, but when it comes to theme and colors, this will effect the **Light** function only.
 ```js
 Fnon.Alert.Init({
-    message: '',
+    message: '', // can be a string or an HTMLElement
     title: '',    
     titleColor: GColors.Dark,
     titleBackground: GColors.Light,
@@ -275,11 +275,13 @@ Fnon.Alert.Init({
     btnOkBorderColor: '#d4d4d4',
     delButtons:false,
 
-    autoFocus: false, // focus when model is loaded
+    autoFocus: false, // focus when model is loaded otherwise first button will be focused
     autoFocusTag: 'input:not([disabled])', // default focus to input which is not disabled
     autoFocusDelay: 0, //if u need to dealy the focus
 
     zIndex:4000,
+
+    showMaxMin:false, // show maximize - minimize button if title bar exists
 
     // Functions
     beforeShow: undefined,
@@ -295,7 +297,7 @@ Fnon.Alert.Init({
 >### 5- Ask
 It's a dialogue similar to **Alert** but it comes with an extra cancel button, and its callback function returns whatever a user clicks `true` or `false`.
 ```js
-// @param1 {string or object}: required, HTML element or respective selector.
+// @param1 {(string | HTMLElement) or json object}: required, message or an object with any settings you wish to modify.
 // @param2 {string}: optional, title || if not provided title section won't be displayed.
 // @param3 {string}: Optional, ok button text || default is Ok.
 // @param4 {string}: Optional, cancel button text || default is Cancel.
@@ -339,7 +341,7 @@ Fnon.Ask.Init({
     titleColor: '#fff',
     titleBackground: '#fff',
 
-    autoFocus: false, // focus when model is loaded
+    autoFocus: false, // focus when model is loaded otherwise first button will be focused
     autoFocusTag: 'input:not([disabled])', // default focus to input which is not disabled
     autoFocusDelay: 0, //if u need to dealy the focus
 
@@ -361,6 +363,8 @@ Fnon.Ask.Init({
     zIndex:4000,
     delButtons:false,
 
+    showMaxMin:false, // show maximize - minimize button if title bar exists
+
     // Functions
     beforeShow: undefined,
     afterShow: undefined,
@@ -373,7 +377,7 @@ Fnon.Ask.Init({
 >### 6- Dialogue
 well, one last time :) it's similar to **Ask** and **alert** but in Dialogue there are no icons and it comes with two default buttons named `ok` and `cancel` with callbacks events if needed. You can **avoid closing** the model by simply returning `false` in callback function.
 ```js
-// @param1 {string or object}: required, HTML element or respective selector.
+// @param1 {(string | HTMLElement) or json object}: required, message or an object with any settings you wish to modify.
 // @param2 {string}: optional, title || if not provided title section won't be displayed.
 // @param3 {string}: Optional, ok button text || default is Ok.
 // @param4 {string}: Optional, cancel button text || default is Cancel.
@@ -478,13 +482,14 @@ Fnon.Dialogue.Init({
     color: '#2b2b2b',
     background: 'rgba(0, 0, 0, 0.1)',
 
-    autoFocus: false, // focus when model is loaded
+    autoFocus: false, // focus when model is loaded otherwise first button will be focused
     autoFocusTag: 'input:not([disabled])', // default focus to input which is not disabled
     autoFocusDelay: 0, //if u need to dealy the focus
 
     zIndex:4000,
     delButtons:false,
 
+    showMaxMin:false, // show maximize - minimize button if title bar exists
     // Functions
     beforeShow: undefined,
     afterShow: undefined,
@@ -506,12 +511,12 @@ All functions pass the HTML content in param.
 
 > P.S :  All functions work the same, you get the HTML if you want to manipulate the HTML or add special events. `default` functions are extra in case you need to add an event as a default to all calls.
 
-```
+```js
 
 
 Fnon.Dialogue.Primary({
   title:'title',
-  message:'content',
+  message:'content', // can be simple string or HTMLElement
   callback:(closer, html)=>{
 
   },
