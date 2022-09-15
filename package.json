@@ -1,6 +1,6 @@
 {
     "name": "fnon",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "Fnon is a client-side JavaScript library for models, loading indicators, notifications, and alerts which makes your web projects much better.",
     "main": "fnon.min.js",
     "scripts": {

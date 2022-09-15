@@ -15,7 +15,7 @@ Colors are based on Bootstrap main categories:
 ![](https://via.placeholder.com/15/222f3e/000000?text=+) `Dark`
 
 
-##### Current Version : [1.1.4](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
+##### Current Version : [1.1.5](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
 
 >### [Live Demo](https://superawdi.github.io/Fnon/)
 
