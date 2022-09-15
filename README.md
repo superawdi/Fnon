@@ -5,14 +5,16 @@ Fnon is the name of my late mother, It's an Arabic word which means Art, I creat
 Fnon is a client-side JavaScript library for models, loading indicators, notifications, and alerts which makes your web projects much better.
 
 Colors are based on Bootstrap main categories:
+<div style="width:15px;height:15px;background:#ffffff;display:inline-block"></div> Light
+<div style="width:15px;height:15px;background:#029eff;display:inline-block"></div> Primary
+<div style="width:15px;height:15px;background:#39DA8A;display:inline-block"></div> Success
+<div style="width:15px;height:15px;background:#f55260;display:inline-block"></div> Danger
+<div style="width:15px;height:15px;background:#fdd347;display:inline-block"></div> Warning
+<div style="width:15px;height:15px;background:#56b6f7;display:inline-block"></div> Info
+<div style="width:15px;height:15px;background:#222f3e;display:inline-block"></div> Dark
 
-![#ffffff](https://via.placeholder.com/15/ffffff/ffffff?text=+) `Light`
-![#029eff](https://via.placeholder.com/15/029eff/029eff?text=+) `Primary`
-![#39DA8A](https://via.placeholder.com/15/39DA8A/39DA8A?text=+) `Success`
-![#f55260](https://via.placeholder.com/15/f55260/f55260?text=+) `Danger`
-![#fdd347](https://via.placeholder.com/15/fdd347/fdd347?text=+) `Warning`
-![#56b6f7](https://via.placeholder.com/15/56b6f7/56b6f7?text=+) `Info`
-![#222f3e](https://via.placeholder.com/15/222f3e/222f3e?text=+) `Dark`
+
+
 
 
 ##### Current Version : [1.1.5](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
