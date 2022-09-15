@@ -6,13 +6,13 @@ Fnon is a client-side JavaScript library for models, loading indicators, notific
 
 Colors are based on Bootstrap main categories:
 
-![](https://via.placeholder.com/15/ffffff/000000?text=+) `Light`
-![](https://via.placeholder.com/15/029eff/000000?text=+) `Primary`
-![](https://via.placeholder.com/15/39DA8A/000000?text=+) `Success`
-![](https://via.placeholder.com/15/f55260/000000?text=+) `Danger`
-![](https://via.placeholder.com/15/fdd347/000000?text=+) `Warning`
-![](https://via.placeholder.com/15/56b6f7/000000?text=+) `Info`
-![](https://via.placeholder.com/15/222f3e/000000?text=+) `Dark`
+![#ffffff](https://via.placeholder.com/15/ffffff/ffffff?text=+) `Light`
+![#029eff](https://via.placeholder.com/15/029eff/029eff?text=+) `Primary`
+![#39DA8A](https://via.placeholder.com/15/39DA8A/39DA8A?text=+) `Success`
+![#f55260](https://via.placeholder.com/15/f55260/f55260?text=+) `Danger`
+![#fdd347](https://via.placeholder.com/15/fdd347/fdd347?text=+) `Warning`
+![#56b6f7](https://via.placeholder.com/15/56b6f7/56b6f7?text=+) `Info`
+![#222f3e](https://via.placeholder.com/15/222f3e/222f3e?text=+) `Dark`
 
 
 ##### Current Version : [1.1.5](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
