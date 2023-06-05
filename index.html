@@ -1,275 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://superawdi.github.io/Fnon/fnon.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://superawdi.github.io/Fnon/fnon.min.css"
+    />
     <title>Fnon</title>
-</head>
+  </head>
 
-<body class="py-5">
-
-
+  <body class="py-5">
     <div class="container py-5">
-        <h6>Current Version is<span style="margin:0 3px 5px 10px" class="badge bg-secondary">1.1.5</span></h6>
-        <p>This is a package demo page, if you want to read the <a href="https://github.com/superawdi/Fnon">documentation press here.</a></p>
+      <h6>
+        Current Version is<span
+          style="margin: 0 3px 5px 10px"
+          class="badge bg-secondary"
+          >1.1.8</span
+        >
+      </h6>
+      <p>
+        This is a package demo page, if you want to read the
+        <a href="https://github.com/superawdi/Fnon"
+          >documentation press here.</a
+        >
+      </p>
     </div>
 
-
-    <hr>
+    <hr />
     <div class="container">
-        <h4 id="hint"><i class="fas fa-comment-alt mx-2"></i>Hint</h4>
-        <p>Hint has 7 themed functions named as bootstraps main colors.</p>
-        <form action="#" id="hintForm">
-            <div class="row">
-                <div class="mb-3">
-                    <label for="hintMessage" class="form-label">Message <span class="text-danger">* Required</span></label>
-                    <textarea class="form-control" name="hintMessage" id="hintMessage" rows="3" placeholder="Hint message is required."></textarea>
-                </div>
-                <div class="mb-3 col-md-6">
-                    <label for="hintTitle" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="hintTitle" name="hintTitle" placeholder="Hint title if needed.">
-                </div>
-                <div class="mb-3 col-md-6">
-                    <label for="hintTheme" class="form-label">Theme</label>
-                    <select class="form-select mb-3" id="hintTheme" name="hintTheme">
-                    <option>Light</option>
-                    <option>Primary</option>
-                    <option>Danger</option>
-                    <option>Warning</option>
-                    <option>Success</option>
-                    <option>Info</option>
-                    <option>Dark</option>
-                  </select>
-                </div>
-                <div class="mb-3 col-md-6">
-                    <label for="hintPosition" class="form-label">Position <span class="text-info">Default is right-top</span></label>
-                    <select class="form-select mb-3" id="hintPosition" name="hintPosition">
-                    <option>right-top</option>
-                    <option>right-center</option>
-                    <option>right-bottom</option>
-                    <option>left-top</option>
-                    <option>left-center</option>
-                    <option>left-bottom</option>
-                    <option>center-top</option>
-                    <option>center-center</option>
-                    <option>center-bottom</option>
-                  </select>
-                </div>
-                <div class="mb-3 col-md-6">
-                    <label for="hintAnimation" class="form-label">Animation <span class="text-info">Default is slide-left</span></label>
-                    <select class="form-select mb-3" id="hintAnimation" name="hintAnimation">
-                        <option>slide-left</option>
-                        <option>slide-right</option>
-                        <option>slide-bottom</option>
-                        <option>slide-top</option>
-                        <option>fade</option>
-                  </select>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Show</button>
-
-        </form>
-    </div>
-    <hr>
-    <div class="container">
-        <h4 id="wait"><i class="fas fa-spinner mx-2"></i>Wait</h4>
-        <p>The Wait is simply a Screen Blocks that prevent the user from interacting with the page until further notice. Wait simply displays an animated SVG icon and a text if provided.</p>
-        <p>The Wait object contains 19 functions, 16 of them are named after the icons used in it.</p>
+      <h4 id="hint"><i class="fas fa-comment-alt mx-2"></i>Hint</h4>
+      <p>Hint has 7 themed functions named as bootstraps main colors.</p>
+      <form action="#" id="hintForm">
         <div class="row">
-            <div class="mb-3 col-md-6">
-                <label for="waitMsg" class="form-label">Message</label>
-                <input type="text" class="form-control" id="waitMsg" name="waitMsg" placeholder="Message if needed.">
-            </div>
-            <div class="mb-3 col-md-6">
-                <label for="waitType" class="form-label">Type</label>
-                <select class="form-select mb-3" id="waitType" name="waitType">
-                  </select>
-            </div>
+          <div class="mb-3">
+            <label for="hintMessage" class="form-label"
+              >Message <span class="text-danger">* Required</span></label
+            >
+            <textarea
+              class="form-control"
+              name="hintMessage"
+              id="hintMessage"
+              rows="3"
+              placeholder="Hint message is required."
+            ></textarea>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="hintTitle" class="form-label">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="hintTitle"
+              name="hintTitle"
+              placeholder="Hint title if needed."
+            />
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="hintTheme" class="form-label">Theme</label>
+            <select class="form-select mb-3" id="hintTheme" name="hintTheme">
+              <option>Light</option>
+              <option>Primary</option>
+              <option>Danger</option>
+              <option>Warning</option>
+              <option>Success</option>
+              <option>Info</option>
+              <option>Dark</option>
+            </select>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="hintPosition" class="form-label"
+              >Position
+              <span class="text-info">Default is right-top</span></label
+            >
+            <select
+              class="form-select mb-3"
+              id="hintPosition"
+              name="hintPosition"
+            >
+              <option>right-top</option>
+              <option>right-center</option>
+              <option>right-bottom</option>
+              <option>left-top</option>
+              <option>left-center</option>
+              <option>left-bottom</option>
+              <option>center-top</option>
+              <option>center-center</option>
+              <option>center-bottom</option>
+            </select>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="hintAnimation" class="form-label"
+              >Animation
+              <span class="text-info">Default is slide-left</span></label
+            >
+            <select
+              class="form-select mb-3"
+              id="hintAnimation"
+              name="hintAnimation"
+            >
+              <option>slide-left</option>
+              <option>slide-right</option>
+              <option>slide-bottom</option>
+              <option>slide-top</option>
+              <option>fade</option>
+            </select>
+          </div>
         </div>
-        <button class="btn btn-primary wait-show-btn">Show</button>
+        <button type="submit" class="btn btn-primary">Show</button>
+      </form>
     </div>
-    <hr>
+    <hr />
     <div class="container">
-        <h4 id="box"><i class="fas fa-stop mx-2"></i>Box</h4>
-        <p>It's basically similar to Wait, but it is used for blocking specific HTML element where Wait will block everything. You have to provide the html element or with the respective css selector.</p>
-
-        <div class="row">
-            <div class="mb-3 col-md-6">
-                <label for="boxSelector" class="form-label">Css Selector <span class="text-danger">* Required</span></label>
-                <input type="text" class="form-control" id="boxSelector" value=".box1" name="boxSelector" placeholder="Css Selector">
-            </div>
-            <div class="mb-3 col-md-6">
-                <label for="boxMsg" class="form-label">Message</label>
-                <input type="text" class="form-control" id="boxMsg" name="boxMsg" placeholder="Message if needed.">
-            </div>
-            <div class="mb-3 col-md-6">
-                <label for="boxType" class="form-label">Type</label>
-                <select class="form-select mb-3" id="boxType" name="boxType">
-                  </select>
-            </div>
+      <h4 id="wait"><i class="fas fa-spinner mx-2"></i>Wait</h4>
+      <p>
+        The Wait is simply a Screen Blocks that prevent the user from
+        interacting with the page until further notice. Wait simply displays an
+        animated SVG icon and a text if provided.
+      </p>
+      <p>
+        The Wait object contains 19 functions, 16 of them are named after the
+        icons used in it.
+      </p>
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <label for="waitMsg" class="form-label">Message</label>
+          <input
+            type="text"
+            class="form-control"
+            id="waitMsg"
+            name="waitMsg"
+            placeholder="Message if needed."
+          />
         </div>
-        <div class="row mb-2">
-            <p>Html Element for practice, just write the specific selector in the css selector field and press show button:</p>
-            <div class="col-md-6 bg-danger box1  text-center text-light fw-bold d-flex align-items-center justify-content-center" style="height:400px;">.box1</div>
-            <div class="col-md-6 bg-secondary text-center text-light fw-bold d-flex align-items-center justify-content-center" id="box2" style="height:400px;">#box2</div>
-            <div class="col-md-6 bg-info  text-center text-light fw-bold d-flex align-items-center justify-content-center" data-id="box3" style="height:400px;">[data-id="box3"]</div>
-            <div class="col-md-6 bg-dark  text-center text-light fw-bold d-flex align-items-center justify-content-center" data-id="box4" style="height:400px;">.col-md-6[data-id="box4"]</div>
+        <div class="mb-3 col-md-6">
+          <label for="waitType" class="form-label">Type</label>
+          <select
+            class="form-select mb-3"
+            id="waitType"
+            name="waitType"
+          ></select>
         </div>
-        <button class="btn btn-primary box-show-btn">Show</button>
-        <button class="btn btn-danger box-remove-btn">Remove</button>
-
+      </div>
+      <button class="btn btn-primary wait-show-btn">Show</button>
     </div>
-
-    <hr>
+    <hr />
     <div class="container">
-        <h4 id="alert"><i class="fas fa-exclamation-triangle mx-2"></i>Alert, <i class="fas fa-question mx-2"></i>Ask and <i class="fas fa-edit mx-2"></i>Dialogue</h4>
-        <p>A different types of dialogues modals. read documentation to understand the difference.</p>
+      <h4 id="box"><i class="fas fa-stop mx-2"></i>Box</h4>
+      <p>
+        It's basically similar to Wait, but it is used for blocking specific
+        HTML element where Wait will block everything. You have to provide the
+        html element or with the respective css selector.
+      </p>
 
-        <div class="row">
-            <div class="mb-3">
-                <label for="alertMessage" class="form-label">Message Body <span class="text-danger">* Required  * It can be plain text or html content</span></label>
-                <textarea class="form-control" name="alertMessage" id="alertMessage" rows="3" placeholder="Hint message is required."></textarea>
-            </div>
-            <div class="mb-3 col-md-6">
-                <label for="alertTitle" class="form-label">Title</label>
-                <input type="text" class="form-control" id="alertTitle" name="alertTitle" placeholder="Hint title if needed.">
-            </div>
-            <div class="mb-3 col-md-6">
-                <label for="alertfun" class="form-label">Function</label>
-                <select class="form-select mb-3" id="alertfun" name="alertfun">
-                    <option>Alert</option>
-                    <option>Ask</option>
-                    <option>Dialogue</option>
-                  </select>
-            </div>
-            <div class="mb-3 col-md-6">
-                <label for="alertTheme" class="form-label">Theme</label>
-                <select class="form-select mb-3" id="alertTheme" name="alertTheme">
-                    <option>Light</option>
-                    <option>Primary</option>
-                    <option>Danger</option>
-                    <option>Warning</option>
-                    <option>Success</option>
-                    <option>Info</option>
-                    <option>Dark</option>
-                  </select>
-            </div>
-            <div class="mb-3 col-md-6">
-                <label for="alertWidth" class="form-label">Width</label>
-                <select class="form-select mb-3" id="alertWidth" name="alertWidth">
-                    <option value="sm">Small</option>
-                    <option value="nl" selected>Normal</option>
-                    <option value="lg">Large</option>
-                    <option value="xl">X-Large</option>
-                    <option value="fl">Full Screen</option>
-                  </select>
-            </div>
-            <div class="mb-3 col-md-6">
-                <label for="alertAnimation" class="form-label">Animation</label>
-                <select class="form-select mb-3" id="alertAnimation" name="alertAnimation">
-                        <option>slide-left</option>
-                        <option>slide-right</option>
-                        <option>slide-bottom</option>
-                        <option>slide-top</option>
-                        <option>fade</option>
-                  </select>
-            </div>
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <label for="boxSelector" class="form-label"
+            >Css Selector <span class="text-danger">* Required</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="boxSelector"
+            value=".box1"
+            name="boxSelector"
+            placeholder="Css Selector"
+          />
         </div>
-        <button class="btn btn-primary btn-show-alert">Show</button>
+        <div class="mb-3 col-md-6">
+          <label for="boxMsg" class="form-label">Message</label>
+          <input
+            type="text"
+            class="form-control"
+            id="boxMsg"
+            name="boxMsg"
+            placeholder="Message if needed."
+          />
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="boxType" class="form-label">Type</label>
+          <select class="form-select mb-3" id="boxType" name="boxType"></select>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <p>
+          Html Element for practice, just write the specific selector in the css
+          selector field and press show button:
+        </p>
+        <div
+          class="col-md-6 bg-danger box1 text-center text-light fw-bold d-flex align-items-center justify-content-center"
+          style="height: 400px"
+        >
+          .box1
+        </div>
+        <div
+          class="col-md-6 bg-secondary text-center text-light fw-bold d-flex align-items-center justify-content-center"
+          id="box2"
+          style="height: 400px"
+        >
+          #box2
+        </div>
+        <div
+          class="col-md-6 bg-info text-center text-light fw-bold d-flex align-items-center justify-content-center"
+          data-id="box3"
+          style="height: 400px"
+        >
+          [data-id="box3"]
+        </div>
+        <div
+          class="col-md-6 bg-dark text-center text-light fw-bold d-flex align-items-center justify-content-center"
+          data-id="box4"
+          style="height: 400px"
+        >
+          .col-md-6[data-id="box4"]
+        </div>
+      </div>
+      <button class="btn btn-primary box-show-btn">Show</button>
+      <button class="btn btn-danger box-remove-btn">Remove</button>
     </div>
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" style="z-index: 4000;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/" style="font-size:2.5em;">𝔉𝔫𝔬𝔫</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#hint"><i class="fas fa-comment-alt mx-2"></i>Hint</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#wait"><i class="fas fa-spinner mx-2"></i>Wait</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#box"><i class="fas fa-stop mx-2"></i>Box</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#alert"><i class="fas fa-exclamation-triangle mx-2"></i>Alert</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#ask"><i class="fas fa-question mx-2"></i>Ask</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#dialouge"><i class="fas fa-edit mx-2"></i>Dialouge</a></li>
-                </ul>
-            </div>
+
+    <hr />
+    <div class="container">
+      <h4 id="alert">
+        <i class="fas fa-exclamation-triangle mx-2"></i>Alert,
+        <i class="fas fa-question mx-2"></i>Ask and
+        <i class="fas fa-edit mx-2"></i>Dialogue
+      </h4>
+      <p>
+        A different types of dialogues modals. read documentation to understand
+        the difference.
+      </p>
+
+      <div class="row">
+        <div class="mb-3">
+          <label for="alertMessage" class="form-label"
+            >Message Body
+            <span class="text-danger"
+              >* Required * It can be plain text or html content</span
+            ></label
+          >
+          <textarea
+            class="form-control"
+            name="alertMessage"
+            id="alertMessage"
+            rows="3"
+            placeholder="Hint message is required."
+          ></textarea>
         </div>
+        <div class="mb-3 col-md-6">
+          <label for="alertTitle" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="alertTitle"
+            name="alertTitle"
+            placeholder="Hint title if needed."
+          />
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="alertfun" class="form-label">Function</label>
+          <select class="form-select mb-3" id="alertfun" name="alertfun">
+            <option>Alert</option>
+            <option>Ask</option>
+            <option>Dialogue</option>
+          </select>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="alertTheme" class="form-label">Theme</label>
+          <select class="form-select mb-3" id="alertTheme" name="alertTheme">
+            <option>Light</option>
+            <option>Primary</option>
+            <option>Danger</option>
+            <option>Warning</option>
+            <option>Success</option>
+            <option>Info</option>
+            <option>Dark</option>
+          </select>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="alertWidth" class="form-label">Width</label>
+          <select class="form-select mb-3" id="alertWidth" name="alertWidth">
+            <option value="sm">Small</option>
+            <option value="nl" selected>Normal</option>
+            <option value="lg">Large</option>
+            <option value="xl">X-Large</option>
+            <option value="fl">Full Screen</option>
+          </select>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="alertAnimation" class="form-label">Animation</label>
+          <select
+            class="form-select mb-3"
+            id="alertAnimation"
+            name="alertAnimation"
+          >
+            <option>slide-left</option>
+            <option>slide-right</option>
+            <option>slide-bottom</option>
+            <option>slide-top</option>
+            <option>fade</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-show-alert">Show</button>
+    </div>
+    <nav
+      class="navbar fixed-top navbar-expand-md navbar-dark bg-dark"
+      style="z-index: 4000"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="font-size: 2.5em">𝔉𝔫𝔬𝔫</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#hint"
+                ><i class="fas fa-comment-alt mx-2"></i>Hint</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#wait"
+                ><i class="fas fa-spinner mx-2"></i>Wait</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#box"
+                ><i class="fas fa-stop mx-2"></i>Box</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#alert"
+                ><i class="fas fa-exclamation-triangle mx-2"></i>Alert</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ask"
+                ><i class="fas fa-question mx-2"></i>Ask</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dialouge"
+                ><i class="fas fa-edit mx-2"></i>Dialouge</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <script src="https://superawdi.github.io/Fnon/fnon.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-
-            Fnon.Hint.Init({
-
-                zIndex: 9900,
-
-            });
-
-            // Hint
-            document.querySelector('#hintForm').addEventListener('submit', e => {
-                    e.preventDefault();
-                    var message = document.querySelector('#hintMessage').value;
-                    var theme = document.querySelector('#hintTheme').value;
-                    var title = document.querySelector('#hintTitle').value;
-                    var position = document.querySelector('#hintPosition').value;
-                    var animation = document.querySelector('#hintAnimation').value;
-                    Fnon.Hint[theme](message, {
-                        title,
-                        position,
-                        animation,
-                    })
-                })
-                // Wait
-            var icons = Object.keys(Fnon.Wait).filter(c => c !== 'Change' && c !== 'Remove').reduce((ac, i) => ac += `<option>${i}</option>`);
-            var waitType = document.querySelector('#waitType');
-            var waitMessage = document.querySelector('#waitMsg');
-            waitType.innerHTML = icons;
-            document.querySelector('.wait-show-btn').addEventListener('click', e => {
-                Fnon.Wait[waitType.value](waitMessage.value);
-            });
-
-            // Box
-            var boxType = document.querySelector('#boxType');
-            var boxSelector = document.querySelector('#boxSelector');
-            var boxMessage = document.querySelector('#boxMsg');
-            boxType.innerHTML = icons;
-            document.querySelector('.box-show-btn').addEventListener('click', e => {
-                Fnon.Box[boxType.value](boxSelector.value, boxMessage.value, {
-                    zindex: -1
-                });
-            });
-            document.querySelector('.box-remove-btn').addEventListener('click', e => {
-                Fnon.Box.Remove(boxSelector.value)
-            });
-            // Alert
-            var alertMessage = document.querySelector('#alertMessage');
-            alertMessage.value = '<div><input type="password" id="pass" placeholder="Enter Password" class="form-control"/></div>';
-            var alertTitle = document.querySelector('#alertTitle');
-            var alertFun = document.querySelector('#alertfun');
-            var alertTheme = document.querySelector('#alertTheme');
-            var alertWidth = document.querySelector('#alertWidth');
-            var alertAnimation = document.querySelector('#alertAnimation');
-
-            document.querySelector('.btn-show-alert').addEventListener('click', e => {
-                Fnon[alertFun.value][alertTheme.value]({
-                    title: alertTitle.value,
-                    message: alertMessage.value,
-                    width: alertWidth.value,
-                    zIndex: 999999,
-                    closeButton: true,
-                    animation: alertAnimation.value
-                })
-            });
-
+      document.addEventListener("DOMContentLoaded", function () {
+        Fnon.Hint.Init({
+          zIndex: 9900,
         });
-    </script>
-</body>
 
+        // Hint
+        document.querySelector("#hintForm").addEventListener("submit", (e) => {
+          e.preventDefault();
+          var message = document.querySelector("#hintMessage").value;
+          var theme = document.querySelector("#hintTheme").value;
+          var title = document.querySelector("#hintTitle").value;
+          var position = document.querySelector("#hintPosition").value;
+          var animation = document.querySelector("#hintAnimation").value;
+          Fnon.Hint[theme](message, {
+            title,
+            position,
+            animation,
+          });
+        });
+        // Wait
+        var icons = Object.keys(Fnon.Wait)
+          .filter((c) => c !== "Change" && c !== "Remove")
+          .reduce((ac, i) => (ac += `<option>${i}</option>`));
+        var waitType = document.querySelector("#waitType");
+        var waitMessage = document.querySelector("#waitMsg");
+        waitType.innerHTML = icons;
+        document
+          .querySelector(".wait-show-btn")
+          .addEventListener("click", (e) => {
+            Fnon.Wait[waitType.value](waitMessage.value);
+          });
+
+        // Box
+        var boxType = document.querySelector("#boxType");
+        var boxSelector = document.querySelector("#boxSelector");
+        var boxMessage = document.querySelector("#boxMsg");
+        boxType.innerHTML = icons;
+        document
+          .querySelector(".box-show-btn")
+          .addEventListener("click", (e) => {
+            Fnon.Box[boxType.value](boxSelector.value, boxMessage.value, {
+              zindex: -1,
+            });
+          });
+        document
+          .querySelector(".box-remove-btn")
+          .addEventListener("click", (e) => {
+            Fnon.Box.Remove(boxSelector.value);
+          });
+        // Alert
+        var alertMessage = document.querySelector("#alertMessage");
+        alertMessage.value =
+          '<div><input type="password" id="pass" placeholder="Enter Password" class="form-control"/></div>';
+        var alertTitle = document.querySelector("#alertTitle");
+        var alertFun = document.querySelector("#alertfun");
+        var alertTheme = document.querySelector("#alertTheme");
+        var alertWidth = document.querySelector("#alertWidth");
+        var alertAnimation = document.querySelector("#alertAnimation");
+
+        document
+          .querySelector(".btn-show-alert")
+          .addEventListener("click", (e) => {
+            Fnon[alertFun.value][alertTheme.value]({
+              title: alertTitle.value,
+              message: alertMessage.value,
+              width: alertWidth.value,
+              zIndex: 999999,
+              closeButton: true,
+              animation: alertAnimation.value,
+            });
+          });
+      });
+    </script>
+  </body>
 </html>
