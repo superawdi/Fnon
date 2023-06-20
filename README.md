@@ -14,7 +14,7 @@ Colors are based on Bootstrap main categories:
 <div style="width:15px;height:15px;background:#56b6f7;display:inline-block"></div> Info
 <div style="width:15px;height:15px;background:#222f3e;display:inline-block"></div> Dark
 
-##### Current Version : [1.1.8](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
+##### Current Version : [1.1.9](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
 
 > ### [Live Demo](https://superawdi.github.io/Fnon/)
 
@@ -305,7 +305,12 @@ Fnon.Alert.Init({
   defaultBefore: undefined,
   defaultAfter: undefined,
 
-  layout: "hbf",
+  // Extra Functions
+  onInit: undefined, // Fires once the Layout is rendered but your body content is not
+  onClosing: undefined, // Fires on closing but the html element still exists
+  onClosed: undefined, // Fires once the html is removed
+
+  layout: "hbf", // Layout h: header b:body f:footer
 });
 ```
 
@@ -395,6 +400,11 @@ Fnon.Ask.Init({
   afterShow: undefined,
   defaultBefore: undefined,
   defaultAfter: undefined,
+
+  // Extra Functions
+  onInit: undefined, // Fires once the Layout is rendered but your body content is not
+  onClosing: undefined, // Fires on closing but the html element still exists
+  onClosed: undefined, // Fires once the html is removed
 
   layout: "hbf",
 });
@@ -532,6 +542,11 @@ Fnon.Dialogue.Init({
   defaultAfter: undefined,
   // custom buttons
   buttons: undefined,
+
+  // Extra Functions
+  onInit: undefined, // Fires once the Layout is rendered but your body content is not
+  onClosing: undefined, // Fires on closing but the html element still exists
+  onClosed: undefined, // Fires once the html is removed
 
   layout: "hbf",
 });
