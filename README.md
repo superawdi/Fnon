@@ -14,7 +14,7 @@ Colors are based on Bootstrap main categories:
 <div style="width:15px;height:15px;background:#56b6f7;display:inline-block"></div> Info
 <div style="width:15px;height:15px;background:#222f3e;display:inline-block"></div> Dark
 
-##### Current Version : [1.1.10](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
+##### Current Version : [1.1.11](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
 
 > ### [Live Demo](https://superawdi.github.io/Fnon/)
 
@@ -535,6 +535,8 @@ Fnon.Dialogue.Init({
   delButtons: false,
 
   showMaxMin: false, // show maximize - minimize button if title bar exists
+
+  showMin:false, // Add minimize button to taskbar
   // Functions
   beforeShow: undefined,
   afterShow: undefined,
