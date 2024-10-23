@@ -14,7 +14,7 @@ Colors are based on Bootstrap main categories:
 <div style="width:15px;height:15px;background:#56b6f7;display:inline-block"></div> Info
 <div style="width:15px;height:15px;background:#222f3e;display:inline-block"></div> Dark
 
-##### Current Version : [1.1.11](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
+##### Current Version : [1.1.12](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
 
 > ### [Live Demo](https://superawdi.github.io/Fnon/)
 
@@ -616,6 +616,7 @@ closer();
 > You can change the order of the layout like putting the footer right next to the header. Also, you can hide any section just by overriding the layout characters `h : HEADER`, `b : BODY` and `f : FOOTER`.
 
 ```js
+
 Fnon.Alert.Primary({
   title:'Title',
   message:'Message'
@@ -627,6 +628,44 @@ Fnon.Alert.Primary({
 });
 
 ```
+
+---
+## Custom Theme
+Create your own coloring theme which will be used in Ask, Alert, Dialogue, and Hint. 
+
+```js
+
+// @param1 {string}: required, which will be used on calling.
+// @param2 {object}: optional,which contains the theme colors.
+Fnon.AddTheme("ThemeName",{
+    titleColor: '#ffff',
+    titleBackground: '#000',
+    btnOkColor: '#fff',
+    btnOkBackground: '#000',
+    btnOkBorderColor: "transparent",
+    btnOkShadow: "rgba(255, 255, 255, 0.1)",
+})
+
+// calling new theme
+Fnon.Alert.ThemeName("hello");
+Fnon.Hint.ThemeName("Yay!");
+Fnon.Ask.ThemeName("....")
+// ...etc
+
+```
+---
+## Custom Logo to Wait and Box
+By creating a new logo or html content, you will need to style it your self ^_^.
+
+```js
+// @param1 {string}: required, name which will be used on calling.
+// @param1 {string}: required, html string content.
+Fnon.AddLogo("Name","<div>Logo</div>");
+// calling new logo
+Fnon.Wait.Name("Hi");
+```
+
+
 
 ---
 
