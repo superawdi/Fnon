@@ -14,7 +14,7 @@ Colors are based on Bootstrap main categories:
 <div style="width:15px;height:15px;background:#56b6f7;display:inline-block"></div> Info
 <div style="width:15px;height:15px;background:#222f3e;display:inline-block"></div> Dark
 
-##### Current Version : [1.1.12](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
+##### Current Version : [1.1.13](https://github.com/superawdi/fnon/ReleaseNotes.md "Release Notes")
 
 > ### [Live Demo](https://superawdi.github.io/Fnon/)
 
@@ -638,12 +638,19 @@ Create your own coloring theme which will be used in Ask, Alert, Dialogue, and H
 // @param1 {string}: required, which will be used on calling.
 // @param2 {object}: optional,which contains the theme colors.
 Fnon.AddTheme("ThemeName",{
+    // required for modals
     titleColor: '#ffff',
     titleBackground: '#000',
     btnOkColor: '#fff',
     btnOkBackground: '#000',
     btnOkBorderColor: "transparent",
     btnOkShadow: "rgba(255, 255, 255, 0.1)",
+
+    // Required For Hint
+    textColor: "#fff",
+    backgroundColor: "#000",
+    shadowColor: "rgba(2, 158, 255, 0.3)",
+    svg: null, // optional
 })
 
 // calling new theme
