@@ -1,3 +1,4 @@
+⛔️ DEPRECATED:
 # 𝔉𝔫𝔬𝔫
 
 Fnon is the name of my late mother, It's an Arabic word which means Art, I created this library in honor of her name.
